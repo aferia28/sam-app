@@ -15,7 +15,8 @@ let response;
  * 
  */
 exports.lambdaHandler = async (event, context) => {
-    try {
+    throw new Error("This will cause a deployment rollback")
+    /*try {
         // const ret = await axios(url);
         response = {
             'statusCode': 200,
@@ -31,4 +32,5 @@ exports.lambdaHandler = async (event, context) => {
     }
 
     return response
+    */
 };
